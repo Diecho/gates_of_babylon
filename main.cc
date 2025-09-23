@@ -7,7 +7,17 @@ enum class gateType {
 };
 
 class Gate {
-    gateType type;
+	private:
+		gateType type;
+		int index = -1;
+		int indexSecond = -1;
+	
+		Gate(gateType t, int idx = -1, int idxSecond = -1);
+
+		gateType getType() const { return type; }
+    	int getIndex() const { return index; }
+    	int getIndexSecond() const { return indexSecond; }
+
 };
 
 int main(){
@@ -25,7 +35,6 @@ int main(){
 		cout << "What sort of gate do you want to add?\n0 - NOT, 1 - AND, 2 - OR, 3 - NAND, 4 - NOR, 5 - XOR, 6 - DONE" << endl;
 		cin >> gate;
 		switch (gate){
-
 			case 0:
 				cout << "Give the index for the input:" << endl;
 				cin >> index;
@@ -42,7 +51,6 @@ int main(){
 				cin >> index;
 				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
-
 			break;
 			case 3:
 				cout << "Give the index for the first input:" << endl;
