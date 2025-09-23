@@ -27,39 +27,39 @@ int main(){
 		switch (gate){
 
 			case 0:
-				cout << "Give the index for the input: " << endl;
+				cout << "Give the index for the input:" << endl;
 				cin >> index;
 				break;
 			case 1:
-				cout << "Give the index for the first input: " << endl;
+				cout << "Give the index for the first input:" << endl;
 				cin >> index;
-				cout << "Give the index for the second input: " << endl;
+				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
 
 				break;
 			case 2:
-				cout << "Give the index for the first input: " << endl;
+				cout << "Give the index for the first input:" << endl;
 				cin >> index;
-				cout << "Give the index for the second input: " << endl;
+				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
 
 			break;
 			case 3:
-				cout << "Give the index for the first input: " << endl;
+				cout << "Give the index for the first input:" << endl;
 				cin >> index;
-				cout << "Give the index for the second input: " << endl;
+				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
 				break;
 			case 4:
-				cout << "Give the index for the first input: " << endl;
+				cout << "Give the index for the first input:" << endl;
 				cin >> index;
-				cout << "Give the index for the second input: " << endl;
+				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
 				break;
 			case 5:
-				cout << "Give the index for the first input: " << endl;
+				cout << "Give the index for the first input:" << endl;
 				cin >> index;
-				cout << "Give the index for the second input: " << endl;
+				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
 				break;
 			case 6:
@@ -70,7 +70,7 @@ int main(){
 				return 0;
 				break;
 
-		cout << "Give the index for the input: " << endl;
+		cout << "Give the index for the input:" << endl;
 		cin >> index;
 			break;
 		}
