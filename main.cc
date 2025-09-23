@@ -17,8 +17,8 @@ int main(){
 
 	int gates;
 	cin >> gates;
-
-	while(true){
+	bool done = false;
+	while(!done){
 		int gate;
 		int index;
 		int index2;
@@ -51,15 +51,12 @@ int main(){
 				cin >> index;
 				break;
 			case 6:
-				cout << "Give the index for the input: " << endl;
-				cin >> index;
+				done = true;
 				break;
 			default:
 				cout << "INVALID INPUT" << endl;
+				return 0;
 				break;
-
-
-
 
 		cout << "Give the index for the input: " << endl;
 		cin >> index;
