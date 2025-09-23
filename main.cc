@@ -2,19 +2,15 @@
 #include <vector>
 using namespace std;
 
-enum class gateType {
-   NOT, AND, OR, NAND, NOR, XOR, INPUT
-};
-
 class Gate {
-	private:
-		gateType type;
+	private: 
+		int type;
 		int index = -1;
 		int indexSecond = -1;
-	
-		Gate(gateType t, int idx = -1, int idxSecond = -1);
+	public:	
+		Gate(int t, int idx = -1, int idxSecond = -1) : type(t), index(idx), indexSecond(idxSecond) {}
 
-		gateType getType() const { return type; }
+		int getType() const { return type; }
     	int getIndex() const { return index; }
     	int getIndexSecond() const { return indexSecond; }
 
@@ -35,52 +31,68 @@ int main(){
 		cout << "What sort of gate do you want to add?\n0 - NOT, 1 - AND, 2 - OR, 3 - NAND, 4 - NOR, 5 - XOR, 6 - DONE" << endl;
 		cin >> gate;
 		switch (gate){
-			case 0:
+			case 0: {
 				cout << "Give the index for the input:" << endl;
 				cin >> index;
+				Gate g(gate, index);
+				Gates.push_back(g);
 				break;
-			case 1:
+ 			}
+			case 1: {
 				cout << "Give the index for the first input:" << endl;
 				cin >> index;
 				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
-
+				Gate g(gate, index, indexSecond);
+				Gates.push_back(g);
 				break;
-			case 2:
+ 			}
+			case 2: {
 				cout << "Give the index for the first input:" << endl;
 				cin >> index;
 				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
-			break;
-			case 3:
+				Gate g(gate, index, indexSecond);
+				Gates.push_back(g);
+				break;
+ 			}
+			case 3: {
 				cout << "Give the index for the first input:" << endl;
 				cin >> index;
 				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
+				Gate g(gate, index, indexSecond);
+				Gates.push_back(g);
 				break;
-			case 4:
+ 			}
+			case 4: {
 				cout << "Give the index for the first input:" << endl;
 				cin >> index;
 				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
+				Gate g(gate, index, indexSecond);
+				Gates.push_back(g);
 				break;
-			case 5:
+ 			}
+			case 5: {
 				cout << "Give the index for the first input:" << endl;
 				cin >> index;
 				cout << "Give the index for the second input:" << endl;
 				cin >> indexSecond;
+				Gate g(gate, index, indexSecond);
+				Gates.push_back(g);
 				break;
-			case 6:
+ 			}
+			case 6: {
 				done = true;
 				break;
-			default:
+ 			}
+			default: {
 				cout << "INVALID INPUT" << endl;
 				return 0;
 				break;
+ 			}
 
-		cout << "Give the index for the input:" << endl;
-		cin >> index;
-			break;
 		}
 	}
 	int choice;
