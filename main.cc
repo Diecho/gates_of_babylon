@@ -75,7 +75,17 @@ int main(){
 			break;
 		}
 	}
-	
+	int choice;
+	cout << "1) Print Circuit Block or 2) Print Truth Table" << endl;
+
+	cin >> choice;
+
+	if(choice == 1){
+
+	}
+
+
+
 	return 0;
 
 
