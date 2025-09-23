@@ -76,7 +76,7 @@ int main(){
 		}
 	}
 	int choice;
-	cout << "1) Print Circuit Block or 2) Print Truth Table" << endl;
+	cout << "\n1) Print Circuit Block or 2) Print Truth Table" << endl;
 
 	cin >> choice;
 
