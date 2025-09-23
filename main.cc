@@ -21,7 +21,7 @@ int main(){
 	while(!done){
 		int gate;
 		int index;
-		int index2;
+		int indexSecond;
 		cout << "What sort of gate do you want to add?\n0 - NOT, 1 - AND, 2 - OR, 3 - NAND, 4 - NOR, 5 - XOR, 6 - DONE" << endl;
 		cin >> gate;
 		switch (gate){
@@ -31,24 +31,36 @@ int main(){
 				cin >> index;
 				break;
 			case 1:
-				cout << "Give the index for the input: " << endl;
+				cout << "Give the index for the first input: " << endl;
 				cin >> index;
+				cout << "Give the index for the second input: " << endl;
+				cin >> indexSecond;
+
 				break;
 			case 2:
-				cout << "Give the index for the input: " << endl;
+				cout << "Give the index for the first input: " << endl;
 				cin >> index;
-				break;
+				cout << "Give the index for the second input: " << endl;
+				cin >> indexSecond;
+
+			break;
 			case 3:
-				cout << "Give the index for the input: " << endl;
+				cout << "Give the index for the first input: " << endl;
 				cin >> index;
+				cout << "Give the index for the second input: " << endl;
+				cin >> indexSecond;
 				break;
 			case 4:
-				cout << "Give the index for the input: " << endl;
+				cout << "Give the index for the first input: " << endl;
 				cin >> index;
+				cout << "Give the index for the second input: " << endl;
+				cin >> indexSecond;
 				break;
 			case 5:
-				cout << "Give the index for the input: " << endl;
+				cout << "Give the index for the first input: " << endl;
 				cin >> index;
+				cout << "Give the index for the second input: " << endl;
+				cin >> indexSecond;
 				break;
 			case 6:
 				done = true;
