@@ -19,9 +19,8 @@ The goal of this project was to get hands-on experience with **digital logic des
 - Build logic blocks with 1–10 inputs
 - Simulate AND, OR, NOT, NAND, NOR, XOR
 - Print full truth tables or circuit layout
-- Error checking for invalid connections
 
 ---
 
-🛠️ _Project built in C/C++ as part of coursework._
+🛠️ _Project built in C++ as part of coursework._
 
