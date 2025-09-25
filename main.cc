@@ -36,9 +36,11 @@ class Gate {
 				return to_string(this->index) + " and " + to_string(this->indexSecond);
 			}
 			return "0";
-
-
 		}
+		string connectedSecond(int index, int size, int inputs) { // jun or matthew do this
+			// FIX ME
+			return "0";
+		}			
 		int getType() const { return type; }
 		int getIndex() const { return index; }
     	int getIndexSecond() const { return indexSecond; }
@@ -105,10 +107,8 @@ int main(){
 		for(size_t i = 0; i < Gates.size(); i++){
 
 			cout << "Gate Type: " << Gates[i].numberToGate() << endl; 
-
-			
 			cout << "\tInput Connected to Index: " << Gates[i].connectedInput() << endl; 
-			cout << "\tOutput Connected to Index: " << endl; 
+			cout << "\tOutput Connected to Index: " << Gates[i].connectedSecond(i, Gates.size(), inputs) << endl; 
 			cout << "\tValue: X" << endl << endl; 
 
 		}
