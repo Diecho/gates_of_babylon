@@ -96,7 +96,7 @@ int main(){
 			
 			cout << "\tInput Connected to Index: " << endl; 
 			cout << "\tOutput Connected to Index: "<< endl; 
-			cout << "\tValue: X" << endl; 
+			cout << "\tValue: X" << endl << endl; 
 
 		}
 	}
