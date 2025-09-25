@@ -102,8 +102,8 @@ int main(){
 			cout << "Gate Type: " << Gates[i].numberToGate() << endl; 
 
 			
-			cout << "\tInput Connected to Index: " << endl; 
-			cout << "\tOutput Connected to Index: " << Gates[i].connected() << endl; 
+			cout << "\tInput Connected to Index: " << Gates[i].connected() << endl; 
+			cout << "\tOutput Connected to Index: " << endl; 
 			cout << "\tValue: X" << endl << endl; 
 
 		}
