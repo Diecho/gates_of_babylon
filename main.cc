@@ -92,6 +92,7 @@ int main(){
 		for(size_t i = 0; i < Gates.size(); i++){
 
 			cout << "Gate Type: " << Gates[i].numberToGate() << endl; 
+			cout << "\tInput Connected to Index:" << Gates[i].numberToGate() << endl; 
 		}
 	}
 
