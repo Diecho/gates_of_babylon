@@ -4,8 +4,6 @@
 
 using namespace std;
 
-
-
 class Gate {
 	private: 
 		int type; // 0 - NOT, 1 - AND, 2 - OR, 3 - NAND, 4 - NOR, 5 - XOR, 6 - INPUT
