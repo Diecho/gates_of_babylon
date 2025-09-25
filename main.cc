@@ -26,6 +26,14 @@ class Gate {
 				default: return "UNKNOWN";
 			}
 		} 
+		auto connected() {
+			if(this->type == 6){
+				return "N.C. and N.C.";
+			}
+			return "0";
+
+
+		}
 		int getType() const { return type; }
 		int getIndex() const { return index; }
     	int getIndexSecond() const { return indexSecond; }
@@ -95,7 +103,7 @@ int main(){
 
 			
 			cout << "\tInput Connected to Index: " << endl; 
-			cout << "\tOutput Connected to Index: "<< endl; 
+			cout << "\tOutput Connected to Index: " << Gates[i].connected() << endl; 
 			cout << "\tValue: X" << endl << endl; 
 
 		}
