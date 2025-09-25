@@ -26,9 +26,14 @@ class Gate {
 				default: return "UNKNOWN";
 			}
 		} 
-		auto connected() {
+		string connectedInput() {
 			if(this->type == 6){
 				return "N.C. and N.C.";
+			}
+			else if(this->indexSecond < 0){
+				return to_string(this->index);
+			}else {
+				return to_string(this->index) + " and " + to_string(this->indexSecond);
 			}
 			return "0";
 
@@ -102,7 +107,7 @@ int main(){
 			cout << "Gate Type: " << Gates[i].numberToGate() << endl; 
 
 			
-			cout << "\tInput Connected to Index: " << Gates[i].connected() << endl; 
+			cout << "\tInput Connected to Index: " << Gates[i].connectedInput() << endl; 
 			cout << "\tOutput Connected to Index: " << endl; 
 			cout << "\tValue: X" << endl << endl; 
 
