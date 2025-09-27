@@ -9,6 +9,7 @@ class Gate {
 		int type; // 0 - NOT, 1 - AND, 2 - OR, 3 - NAND, 4 - NOR, 5 - XOR, 6 - INPUT
 		int index = -1;
 		int indexSecond = -1;
+		int connectedTo = -1;
 	public:	
 		Gate(int t, int idx = -1, int idxSecond = -1) : type(t), index(idx), indexSecond(idxSecond) {}
 
@@ -38,6 +39,7 @@ class Gate {
 		string connectedSecond(int index, vector<Gate> Gates, int inputs) { // jun or matthew do this
 			// FIX ME
 			int output = 0; 
+
 		/*	if(index < inputs){
 				if(Gates[index + inputs].getType() == 0){
 					
@@ -46,12 +48,13 @@ class Gate {
 					output = index + inputs;
 				}
 			}*/
-			return to_string(output);
+			return to_string(this->connectedTo);
 		}			
 		int getType() const { return type; }
 		int getIndex() const { return index; }
     	int getIndexSecond() const { return indexSecond; }
-
+    	int getConnected() const { return connectedTo; }
+    	void setConnectedTo(int i) { connectedTo = i; }
 };
 
 int main(){
@@ -61,10 +64,6 @@ int main(){
 
 	int inputs;
 	cin >> inputs;
-	for(int i = 0; i < inputs; i++){
-		Gate g(6, -1);
-		Gates.push_back(g);
-	}
 	bool done = false;
 	while(!done){
 		int gate;
@@ -105,6 +104,28 @@ int main(){
 
 		}
 	}
+	// Gates.insert(Gates.begin(), );
+	int j = 0;
+	int total = inputs + Gates.size();	
+	for(int  i = Gates.size() - 1; i >= 0; i--){
+	//for(int i = 0; i < inputs; i++){
+		j++;	
+		if(i == Gates.size() - 1){
+			Gates[i].setConnectedTo(-1);	
+			Gate g(6);
+			g.setConnectedTo(total);
+			Gates.insert(Gates.begin(), g);
+		}
+		else if(Gates[i].getType() == 0){
+		
+		}else {
+			Gates[i].setConnectedTo(total + 1 - j);	
+			Gate g(6);
+			g.setConnectedTo(total - j);
+			Gates.insert(Gates.begin(), g);
+		}
+	}
+
 	int choice;
 	cout << "\n1) Print Circuit Block or 2) Print Truth Table" << endl;
 
@@ -120,8 +141,6 @@ int main(){
 
 		}
 	}
-
-
 
 
 	return 0;
