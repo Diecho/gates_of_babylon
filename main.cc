@@ -122,6 +122,8 @@ int main(){
 		else if(Gates[i].getType() == 0){
 		
 		}else {
+
+			cout << "SECONDactivated" << endl;
 			Gates[i].setConnectedTo(total + 1 - j);	
 			Gate g(6);
 			g.setConnectedTo(total - j);
