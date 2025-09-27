@@ -128,6 +128,9 @@ int main(){
 			Gate g(6);
 			g.setConnectedTo(total - j);
 			Gates.insert(Gates.begin(), g);
+			if(i == 0){
+				Gates.insert(Gates.begin(), g);
+			}
 		}
 		
 		j++;	
