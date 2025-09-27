@@ -38,14 +38,14 @@ class Gate {
 		string connectedSecond(int index, vector<Gate> Gates, int inputs) { // jun or matthew do this
 			// FIX ME
 			int output = 0; 
-			if(index < inputs){
+		/*	if(index < inputs){
 				if(Gates[index + inputs].getType() == 0){
 					
 				}
 				else{
 					output = index + inputs;
 				}
-			}
+			}*/
 			return to_string(output);
 		}			
 		int getType() const { return type; }
