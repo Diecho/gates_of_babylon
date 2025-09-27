@@ -116,7 +116,7 @@ int main(){
 			//cout << "activated" << endl;
 			Gates[i].setConnectedTo(-1);	
 			Gate g(6);
-			g.setConnectedTo(total);
+			g.setConnectedTo(total - 1);
 			Gates.insert(Gates.begin(), g);
 		}
 		else if(Gates[i].getType() == 0){
