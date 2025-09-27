@@ -118,6 +118,10 @@ int main(){
 			Gate g(6);
 			g.setConnectedTo(total - 1);
 			Gates.insert(Gates.begin(), g);
+			if(i == 0){
+				Gates.insert(Gates.begin(), g);
+			}
+
 		}
 		else if(Gates[i].getType() == 0){
 		
