@@ -113,7 +113,7 @@ int main(){
 	for(int  i = Gates.size() - 1; i >= 0; i--){
 	//for(int i = 0; i < inputs; i++){
 		if(i == (Gates.size() - 1)){
-			cout << "activated" << endl;
+			//cout << "activated" << endl;
 			Gates[i].setConnectedTo(-1);	
 			Gate g(6);
 			g.setConnectedTo(total);
@@ -123,7 +123,7 @@ int main(){
 		
 		}else {
 
-			cout << "SECONDactivated" << endl;
+			//cout << "SECONDactivated" << endl;
 			Gates[i].setConnectedTo(total + 1 - j);	
 			Gate g(6);
 			g.setConnectedTo(total - j);
