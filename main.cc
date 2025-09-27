@@ -126,7 +126,7 @@ int main(){
 			//cout << "SECONDactivated" << endl;
 			Gates[i].setConnectedTo(total + 1 - j);	
 			Gate g(6);
-			g.setConnectedTo(total - j);
+			g.setConnectedTo(total - j - 1);
 			Gates.insert(Gates.begin(), g);
 			if(i == 0){
 				Gates.insert(Gates.begin(), g);
