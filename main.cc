@@ -128,7 +128,7 @@ int main(){
 			cout << "activated" << endl;
 			j--;
 		}else {
-			cout << Gates[i + j].getType() << endl; 
+			cout << Gates[i].getType() << endl; 
 			//cout << "SECONDactivated" << endl;
 			Gates[i + j].setConnectedTo(total - j);	
 			Gate g(6);
