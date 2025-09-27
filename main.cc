@@ -125,6 +125,7 @@ int main(){
 		}
 		else if(Gates[i].getType() == 0){
 		
+			Gates[i + j].setConnectedTo(total - j);	
 		}else {
 
 			//cout << "SECONDactivated" << endl;
