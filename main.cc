@@ -123,8 +123,8 @@ int main(){
 			}
 
 		}
-		else if(Gates[i + j - 2].getType() == 0){
-			Gates[i + j - 2].setConnectedTo(total - j);	
+		else if(Gates[i + j - 1].getType() == 0){
+			Gates[i + j - 1].setConnectedTo(total - j);	
 			cout << "activated" << endl;
 			j--;
 		}else {
