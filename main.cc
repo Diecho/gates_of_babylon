@@ -112,7 +112,6 @@ int main(){
 	int total = inputs + Gates.size();	
 	for(int  i = Gates.size() - 1; i >= 0; i--){
 	//for(int i = 0; i < inputs; i++){
-		j++;	
 		if(i == (Gates.size() - 1)){
 			Gates[i].setConnectedTo(-1);	
 			Gate g(6);
@@ -127,6 +126,8 @@ int main(){
 			g.setConnectedTo(total - j);
 			Gates.insert(Gates.begin(), g);
 		}
+		
+		j++;	
 	}
 
 	int choice;
