@@ -125,6 +125,7 @@ int main(){
 		}
 		else if(Gates[i + j].getType() == 0){
 			Gates[i + j].setConnectedTo(total - j);	
+			cout << "activated" << endl;
 			j--;
 		}else {
 
