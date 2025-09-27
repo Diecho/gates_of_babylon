@@ -48,6 +48,9 @@ class Gate {
 					output = index + inputs;
 				}
 			}*/
+			if(this->connectedTo == -1){
+				return "OUTPUT PIN";
+			}
 			return to_string(this->connectedTo);
 		}			
 		int getType() const { return type; }
