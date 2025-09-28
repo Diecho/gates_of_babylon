@@ -171,7 +171,18 @@ int main(){
 		s = s + "O";
 		cout << s << endl;
 		vector<bool> b(inputs, 1);
-		for(int i = 0; i < pow(2, inputs); i++){
+		int n = pow(2, inputs);
+		for(int i = n - 1; i >= 0; i--){
+			for(int j = n - 1; j >= 0; j--){
+				int bit = (i >> j) & 1;
+				cout << bit  << "|";
+			}
+			cout << "1" << endl;
+		}
+		/*for(int i = 0; i < pow(2, inputs); i++){
+			if(i % 2 == 1){
+				j++;
+			}
 			s = "";	
 			for(int i = 0; i < b.size(); i++){
 				if(b[i]){
@@ -183,7 +194,8 @@ int main(){
 
 			cout << s << endl;
 
-		}
+			
+		}*/
 	}
 
 
