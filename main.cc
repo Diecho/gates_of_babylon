@@ -115,6 +115,7 @@ int main(){
 		//cout << Gates[i + j].getType() << endl; 
 		if((Gates[i].getType() == 0)  && (i == (Gates.size() - 1))){
 			Gates[i].setConnectedTo(-1);	
+			j--;
 		}
 		else if(i == (Gates.size() - 1)){
 			//cout << "activated" << endl;
