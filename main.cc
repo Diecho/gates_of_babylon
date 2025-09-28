@@ -169,6 +169,11 @@ int main(){
 		}
 		s = s + "O";
 		cout << s << endl;
+		vector<bool>(inputs, 1);
+		for(){
+
+
+		}
 	}
 
 
