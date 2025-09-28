@@ -109,6 +109,7 @@ int main(){
 	}
 	// Gates.insert(Gates.begin(), );
 	int j = 0;
+	int a = 0;
 	int total = inputs + Gates.size();	
 	for(int  i = Gates.size() - 1; i >= 0; i--){
 	//for(int i = 0; i < inputs; i++){
@@ -116,6 +117,7 @@ int main(){
 		if((Gates[i].getType() == 0)  && (i == (Gates.size() - 1))){
 			Gates[i].setConnectedTo(-1);	
 			j--;
+			a++;
 		}
 		else if(i == (Gates.size() - 1)){
 			//cout << "activated" << endl;
@@ -129,13 +131,14 @@ int main(){
 
 		}
 		else if(Gates[i + j].getType() == 0){
-			Gates[i + j ].setConnectedTo(total - j);	
+			Gates[i + j ].setConnectedTo(total - j - a);	
 			j--;
+			a++;
 		}else {
 			//cout << "SECONDactivated" << endl;
-			Gates[i + j].setConnectedTo(total - j);	
+			Gates[i + j].setConnectedTo(total - j - a);	
 			Gate g(6);
-			g.setConnectedTo(total - j - 1);
+			g.setConnectedTo(total - j - 1 - a);
 			Gates.insert(Gates.begin(), g);
 			if(i == 0){
 				Gates.insert(Gates.begin(), g);
