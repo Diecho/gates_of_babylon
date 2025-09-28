@@ -60,6 +60,43 @@ class Gate {
     	int getConnected() const { return connectedTo; }
     	void setConnectedTo(int i) { connectedTo = i; }
 };
+bool output(const vector<Gate>& Gates, const vector<bool>& inputs) {
+	vector<bool> values(Gates.size() + inputs.size());
+	for (size_t i = 0; i < inputs.size(); ++i) {
+		values[i] = inputs[i];
+	}
+	for (size_t i = 0; i < Gates.size(); ++i) {
+		const Gate& currentGate = Gates[i];
+		bool input1Value = values[currentGate.getIndex()];
+		bool input2Value = false;
+		if (currentGate.getIndexSecond() != -1) {
+			input2Value = values[currentGate.getIndexSecond()];
+		}
+		bool outputValue = false;
+		switch (currentGate.getType()) {
+			case 0: // not
+				outputValue = !input1Value;
+				break;
+			case 1: // and
+				outputValue = input1Value && input2Value;
+				break;
+			case 2: // or
+				outputValue = input1Value || input2Value;
+				break;
+			case 3: // nand
+				outputValue = !(input1Value && input2Value);
+				break;
+			case 4: // nor
+				outputValue = !(input1Value || input2Value);
+				break;
+			case 5: // xor
+				outputValue = input1Value != input2Value;
+				break;
+		}
+		values[inputs.size() + i] = outputValue;
+	}
+	return values.back();
+}
 
 int main(){
 	vector<Gate> Gates;
@@ -112,6 +149,7 @@ int main(){
 	int j = 0;
 	int a = 0;
 	int total = inputs + Gates.size();	
+	vector<Gate> G = Gates;
 	for(int  i = Gates.size() - 1; i >= 0; i--){
 	//for(int i = 0; i < inputs; i++){
 		//cout << Gates[i + j].getType() << endl; 
@@ -173,11 +211,13 @@ int main(){
 		vector<bool> b(inputs, 1);
 		int n = pow(2, inputs);
 		for(int i = n - 1; i >= 0; i--){
+			vector<bool> inp;
 			for(int j = inputs - 1; j >= 0; j--){
 				int bit = (i >> j) & 1;
 				cout << bit  << "|";
+				inp.push_back(bit);
 			}
-			cout << "1" << endl;
+			cout << output(G, inp) << endl;
 		}
 		/*for(int i = 0; i < pow(2, inputs); i++){
 			if(i % 2 == 1){
