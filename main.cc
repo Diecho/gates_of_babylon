@@ -181,7 +181,7 @@ int main(){
 				}	
 			}
 
-			cout << i << endl;
+			cout << s << endl;
 
 		}
 	}
