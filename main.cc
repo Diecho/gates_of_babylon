@@ -162,6 +162,13 @@ int main(){
 			cout << "\tValue: X" << endl << endl; 
 
 		}
+	}else if(choice == 2){
+		string s = "";
+		for(int i = 0; i < inputs; i++){
+			s = s + to_string(i) + "|";	
+		}
+		s = s + "O";
+		cout << s << endl;
 	}
 
 
