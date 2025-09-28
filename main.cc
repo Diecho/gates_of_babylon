@@ -173,7 +173,7 @@ int main(){
 		vector<bool> b(inputs, 1);
 		int n = pow(2, inputs);
 		for(int i = n - 1; i >= 0; i--){
-			for(int j = n - 1; j >= 0; j--){
+			for(int j = inputs - 1; j >= 0; j--){
 				int bit = (i >> j) & 1;
 				cout << bit  << "|";
 			}
