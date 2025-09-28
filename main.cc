@@ -189,7 +189,6 @@ int main(){
 
 	int choice;
 	cout << "\n1) Print Circuit Block or 2) Print Truth Table" << endl;
-	cout << "Input Pins (Numbers), Output Pin (O):" << endl;
 	
 	cin >> choice;
 
@@ -203,6 +202,7 @@ int main(){
 
 		}
 	}else if(choice == 2){
+		cout << "Input Pins (Numbers), Output Pin (O):" << endl;
 		string s = "";
 		for(int i = 0; i < inputs; i++){
 			s = s + to_string(i) + "|";	
