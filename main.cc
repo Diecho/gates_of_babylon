@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -170,8 +171,8 @@ int main(){
 		s = s + "O";
 		cout << s << endl;
 		vector<bool>(inputs, 1);
-		for(){
-
+		for(int i = 0; i < pow(2, inputs); i++){
+			cout << i << endl;
 
 		}
 	}
