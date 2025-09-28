@@ -189,7 +189,8 @@ int main(){
 
 	int choice;
 	cout << "\n1) Print Circuit Block or 2) Print Truth Table" << endl;
-
+	cout << "Input Pins (Numbers), Output Pin (O):" << endl;
+	
 	cin >> choice;
 
 	if(choice == 1){
