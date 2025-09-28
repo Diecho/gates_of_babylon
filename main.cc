@@ -170,8 +170,17 @@ int main(){
 		}
 		s = s + "O";
 		cout << s << endl;
-		vector<bool>(inputs, 1);
+		vector<bool> b(inputs, 1);
 		for(int i = 0; i < pow(2, inputs); i++){
+			s = "";	
+			for(int i = 0; i < b.size(); i++){
+				if(b[i]){
+					s = s + "1" + "|";	
+				}else{
+					s = s + "0" + "|";	
+				}	
+			}
+
 			cout << i << endl;
 
 		}
